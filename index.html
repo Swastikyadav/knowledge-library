@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Knowledge Library!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="./stylesheets/reset.css">
+    <link rel="stylesheet" href="./stylesheets/style.css">
+  </head>  
+  <body>
+    <h1>Knowledge Library</h1>
+    
+<!--  Buttons    -->
+  <section class="btn-section">
+    <button id="toRead">
+      To Read
+    </button>
+    <button id="reading">
+      Reading
+    </button>
+    <button id="finished">
+      Finished Reading
+    </button>
+  </section>
+    
+<!--   BOXES   -->
+    <div id="toReadBox">
+      <form class="form-control">
+        <input class="addbook" id="book" type="text" placeholder="Enter book name">
+        <br>
+        <input id="imgInput" type="text" placeholder="Enter image URL" src="">
+        <br>
+        <button id="addbtn">Add New Book</button>
+      </form>
+      <!--   Books     -->
+      <div id="book-div">
+        
+      </div>
+    </div>
+    <div id="readingBox">
+      <div id="book-div2">
+        
+      </div>
+    </div>
+    <div id="finishedBox">
+      <div id="book-div3">
+        
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

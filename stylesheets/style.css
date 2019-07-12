@@ -1,0 +1,96 @@
+html {
+  font-size: 16px;
+}
+body {
+    font-family: sans-serif;
+    box-sizing: border-box;
+  }
+  
+  /* H1 Heading */
+  h1 {
+    font-style: italic;
+    color: #373fff;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  /* Button Container */
+  .btn-section {
+    text-align: center;
+  }
+  button {
+    margin: 0.5rem;
+    padding: 0.3rem;
+    cursor: pointer;
+    border: none;
+    font-weight: 900;
+    border-radius: 5px;
+    background: #373fff;
+    color: #fff;
+  }
+
+  /* Book holders */
+  #toReadBox,
+  #readingBox,
+  #finishedBox
+   {
+    background: rgba(185, 185, 185, 0.397);
+    width: 90%;
+    display: none;
+    padding: 1rem;
+    margin: 0 auto;
+  }
+
+  /* Form Control */
+  .form-control {
+   text-align: center;
+  }
+  .form-control input {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+
+  /* Book Holder style */
+  #book-div,
+  #book-div2,
+  #book-div3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+  .book-holder {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    text-align: center;
+    background: hotpink;
+    margin: 1rem 0;
+  }
+  .book-holder img {
+    grid-row-start: 1;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 0.5rem;
+  }
+  .book-holder .readbtn {
+    grid-row-start: 3;
+  }
+  .book-holder .deletebtn {
+    grid-row-start: 4;
+  }
+  
+
+  /* Media Query */
+  @media all and (min-width: 600px) {
+    #book-div,
+    #book-div2,
+    #book-div3 {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+  }
