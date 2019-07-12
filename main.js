@@ -16,16 +16,19 @@ btn1.addEventListener("click", function showBox1() {
   box1.style.display = "block";
   box2.style.display = "none";
   box3.style.display = "none";
+  store();
 });
 btn2.addEventListener("click", function showBox2() {
   box1.style.display = "none";
   box2.style.display = "block";
   box3.style.display = "none";
+  store();
 });
 btn3.addEventListener("click", function showBox3() {
   box1.style.display = "none";
   box2.style.display = "none";
   box3.style.display = "block";
+  store();
 });
 
 // Adding books
@@ -66,6 +69,8 @@ addBtn.addEventListener("click", function addBooks(e) {
   // Clear input field
   document.getElementById("imgInput").value = "";
   document.getElementById("book").value = "";
+
+  store();
 });
 
 // Move book to reading tab
@@ -82,6 +87,8 @@ readBtn.addEventListener("click", function move(e) {
       book.children[0].style.display = "none";
       book.children[1].innerHTML = "Mark as read";
      }
+
+     store();
 });
 
 // Delete function
@@ -90,6 +97,8 @@ function hideFromToRead(e) {
       var book = e.target.parentElement;
       bookDiv.removeChild(book);
   }
+
+  store();
 }
 
 // Move book to finished tab
@@ -101,6 +110,8 @@ function moveToFinished(e) {
     
       book.children[1].style.display = "none";
   }
+
+  store();
 }
 
 // Remove book-holder on delete
@@ -110,3 +121,21 @@ deleteBtn.addEventListener("click", hideFromToRead);
 // Calling move to finished function.
 var readBtn = document.getElementById("readingBox");
 readBtn.addEventListener("click", moveToFinished);
+
+// Local Storage.
+
+var book_card = document.querySelector('.bookDiv');
+function store() {
+  window.localStorage.myitems = book_card.innerHTML;
+}
+
+function getValues() {
+  var storedValues = window.localStorage.myitems;
+  if(!storedValues) {
+    book_card.innerHTML = ""
+  }
+  else {
+    book_card.innerHTML = storedValues;
+  }
+}
+getValues();
