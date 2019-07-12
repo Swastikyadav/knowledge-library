@@ -12,22 +12,28 @@ var box3 = document.getElementById("finishedBox");
 var bookDiv = document.getElementById("book-div");
 var bookDiv2 = document.getElementById("book-div2");
 
+// Hero-section
+var hero = document.querySelector(".hero-section");
+
 btn1.addEventListener("click", function showBox1() {
   box1.style.display = "block";
   box2.style.display = "none";
   box3.style.display = "none";
+  hero.style.display = "none";
   store();
 });
 btn2.addEventListener("click", function showBox2() {
   box1.style.display = "none";
   box2.style.display = "block";
   box3.style.display = "none";
+  hero.style.display = "none";
   store();
 });
 btn3.addEventListener("click", function showBox3() {
   box1.style.display = "none";
   box2.style.display = "none";
   box3.style.display = "block";
+  hero.style.display = "none";
   store();
 });
 
@@ -46,7 +52,7 @@ addBtn.addEventListener("click", function addBooks(e) {
   
   // Create read button
   var readBtn = document.createElement("button");
-  readBtn.innerText = "Start Readin";
+  readBtn.innerText = "Start Reading";
   readBtn.className = "readbtn";
   readBtn.id = "readbtn";
   
