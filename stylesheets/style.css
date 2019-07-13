@@ -57,6 +57,9 @@ body {
   .hero-section h5 {
     font-size: 1.5rem;
   }
+  .hero-section span {
+    color: #373fff;
+  }
 
   /* Form Control */
   .form-control {
